@@ -9,7 +9,6 @@
 #import "SevenFormView.h"
 #import "UIView+FindFirstResponder.h"
 #import "UIView+AlterFrame.h"
-#import "Helpers.h"
 
 @interface SevenFormView ()
 
@@ -72,7 +71,7 @@
             [field setReturnKeyType:UIReturnKeyNext];
             
             if ([theSevenObject dateValue] != nil) {
-                [field setText:[Helpers stringAsShortDate:[theSevenObject dateValue]]];
+                [field setText:[self stringAsShortDate:[theSevenObject dateValue]]];
             }
             [field setPlaceholder:[theSevenObject placeholder]];
             
@@ -262,7 +261,7 @@
     df.dateStyle = NSDateFormatterMediumStyle;
     
     SevenTextField *field = [arrayOfPlacedFields objectAtIndex:[sender tag]-1];
-    [field setText:[Helpers stringAsShortDate:((UIDatePicker*)sender).date]];
+    [field setText:[self stringAsShortDate:((UIDatePicker*)sender).date]];
     
     
     /* the following allows you to choose the date components
@@ -416,6 +415,75 @@
     if ([[textField sevenObject] isDatePicker]) {
         [[textField sevenObject] setDateValue:[(UIDatePicker*)[textField inputView] date]];
     }
+}
+
+#pragma mark - helper methods
+
+- (void)setContentSizeOfScrollView:(UIScrollView*)scroll {
+  BOOL restoreHorizontal = NO;
+  BOOL restoreVertical = NO;
+  
+  if ([scroll respondsToSelector:@selector(setShowsHorizontalScrollIndicator:)] && [scroll respondsToSelector:@selector(setShowsVerticalScrollIndicator:)])
+  {
+    if ([scroll showsHorizontalScrollIndicator])
+    {
+      restoreHorizontal = YES;
+      [scroll setShowsHorizontalScrollIndicator:NO];
+    }
+    if ([scroll showsVerticalScrollIndicator])
+    {
+      restoreVertical = YES;
+      [scroll setShowsVerticalScrollIndicator:NO];
+    }
+  }
+  CGRect contentRect = CGRectZero;
+  for (UIView *view in scroll.subviews) {
+    if (![view isHidden])
+      contentRect = CGRectUnion(contentRect, view.frame);
+  }
+  if (contentRect.size.height > scroll.frame.size.height)
+    [scroll setScrollEnabled:TRUE];
+  else
+    [scroll setScrollEnabled:FALSE];
+  if ([scroll respondsToSelector:@selector(setShowsHorizontalScrollIndicator:)] && [scroll respondsToSelector:@selector(setShowsVerticalScrollIndicator:)])
+  {
+    if (restoreHorizontal)
+    {
+      [scroll setShowsHorizontalScrollIndicator:YES];
+    }
+    if (restoreVertical)
+    {
+      [scroll setShowsVerticalScrollIndicator:YES];
+    }
+  }
+  contentRect.size.height += 8;
+  if (contentRect.origin.y < 0) {
+    contentRect.size.height += contentRect.origin.y;
+  }
+  scroll.contentSize = contentRect.size;
+  [scroll setCanCancelContentTouches:YES];
+}
+
+#pragma mark - dates
+
+- (NSString*)stringAsShortDate:(NSDate*)date {
+  NSDateFormatter *formatter;
+  if (!formatter) {
+    formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"MM/dd/yyyy"];
+  }
+  
+  return [formatter stringFromDate: date];
+}
+
+- (NSString *)stringAsUTCnoTime:(NSDate*)date {
+  NSDateFormatter *formatter2;
+  if (!formatter2) {
+    formatter2 = [[NSDateFormatter alloc] init];
+    [formatter2 setDateFormat:@"yyyy'-'MM'-'dd'"];
+  }
+  
+  return [formatter2 stringFromDate:date];
 }
 
 #pragma mark - lifecycle

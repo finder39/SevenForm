@@ -8,7 +8,6 @@
 
 #import "ViewController.h"
 #import "UIView+FindFirstResponder.h"
-#import "Helpers.h"
 
 @interface ViewController ()
 
@@ -29,7 +28,7 @@
 - (void)viewWillAppear:(BOOL)animated {
   [super viewWillAppear:animated];
   
-  if (sevenForm.arrayOfObjectsToUse.count == 0) {
+  if (sevenForm.arrayOfObjectsToUse.count == 0) {    
     [[sevenForm arrayOfObjectsToUse] addObject:[[SevenObjectClass alloc] initHeaderWithTitle:@"Personal Information"]];
     [[sevenForm arrayOfObjectsToUse] addObject:[[SevenObjectClass alloc] initFieldWithTitle:nil value:nil placeholder:@"First Name" key:@"firstName"]];
     [[[sevenForm arrayOfObjectsToUse] lastObject] setAutocapitalizationType:UITextAutocapitalizationTypeWords];
@@ -84,7 +83,7 @@
     //NSLog(@"%f, %f, %f, %f", scrollView.bounds.origin.x, scrollView.bounds.origin.y, scrollView.bounds.size.width, scrollView.bounds.size.height);
   }
   
-  [Helpers setContentSizeOfScrollView:sevenForm];
+  [sevenForm setContentSizeOfScrollView:sevenForm];
   [sevenForm setScrollEnabled:TRUE];
 }
 
@@ -132,7 +131,7 @@
     [toEditDict setValue:[sevenForm getSevenObjectWithKey:@"firstName"].value forKey:@"firstName"];
     [toEditDict setValue:[sevenForm getSevenObjectWithKey:@"lastName"].value forKey:@"lastName"];
     [toEditDict setValue:[sevenForm getSevenObjectWithKey:@"gender"].value forKey:@"gender"];
-    [toEditDict setValue:[Helpers stringAsUTCnoTime:[sevenForm getSevenObjectWithKey:@"dob"].dateValue] forKey:@"dob"];
+    [toEditDict setValue:[sevenForm stringAsUTCnoTime:[sevenForm getSevenObjectWithKey:@"dob"].dateValue] forKey:@"dob"];
     [toEditDict setValue:[sevenForm getSevenObjectWithKey:@"email"].value forKey:@"email"];
     [toEditDict setValue:[sevenForm getSevenObjectWithKey:@"phone"].value forKey:@"phone"];
     [toEditDict setValue:[sevenForm getSevenObjectWithKey:@"emergencyName"].value forKey:@"emergencyName"];

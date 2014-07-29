@@ -11,7 +11,6 @@
 		D8577F181987632F0046D9AE /* FullScreenDivider_V2.png in Resources */ = {isa = PBXBuildFile; fileRef = D8577F151987632F0046D9AE /* FullScreenDivider_V2.png */; };
 		D8577F191987632F0046D9AE /* FullScreenDivider_V2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8577F161987632F0046D9AE /* FullScreenDivider_V2@2x.png */; };
 		D8577F1A1987632F0046D9AE /* FullScreenDivider_V2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8577F161987632F0046D9AE /* FullScreenDivider_V2@2x.png */; };
-		D8736AD819883D4D00F5711E /* Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = D8736AD719883D4D00F5711E /* Helpers.m */; };
 		D8DEDC591987508500279B04 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8DEDC581987508500279B04 /* Foundation.framework */; };
 		D8DEDC5B1987508500279B04 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8DEDC5A1987508500279B04 /* CoreGraphics.framework */; };
 		D8DEDC5D1987508500279B04 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8DEDC5C1987508500279B04 /* UIKit.framework */; };
@@ -51,8 +50,6 @@
 /* Begin PBXFileReference section */
 		D8577F151987632F0046D9AE /* FullScreenDivider_V2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FullScreenDivider_V2.png; sourceTree = "<group>"; };
 		D8577F161987632F0046D9AE /* FullScreenDivider_V2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FullScreenDivider_V2@2x.png"; sourceTree = "<group>"; };
-		D8736AD619883D4D00F5711E /* Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Helpers.h; sourceTree = "<group>"; };
-		D8736AD719883D4D00F5711E /* Helpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Helpers.m; sourceTree = "<group>"; };
 		D8DEDC551987508500279B04 /* SevenForm Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SevenForm Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8DEDC581987508500279B04 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D8DEDC5A1987508500279B04 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -213,8 +210,6 @@
 				D8DEDC911987521800279B04 /* UIView+AlterFrame.m */,
 				D8DEDC921987521800279B04 /* UIView+FindFirstResponder.h */,
 				D8DEDC931987521800279B04 /* UIView+FindFirstResponder.m */,
-				D8736AD619883D4D00F5711E /* Helpers.h */,
-				D8736AD719883D4D00F5711E /* Helpers.m */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -326,7 +321,6 @@
 				D8DEDCA21987521800279B04 /* SevenObjectClass.m in Sources */,
 				D8DEDC6F1987508500279B04 /* ViewController.m in Sources */,
 				D8DEDC9C1987521800279B04 /* UIView+AlterFrame.m in Sources */,
-				D8736AD819883D4D00F5711E /* Helpers.m in Sources */,
 				D8DEDC691987508500279B04 /* AppDelegate.m in Sources */,
 				D8DEDC651987508500279B04 /* main.m in Sources */,
 			);

@@ -20,4 +20,9 @@
 - (SevenObjectClass*)getSevenObjectWithKey:(NSString*)key;
 - (void)createForm;
 
+#pragma mark - helper methods
+- (void)setContentSizeOfScrollView:(UIScrollView*)scroll;
+- (NSString*)stringAsShortDate:(NSDate*)date;
+- (NSString *)stringAsUTCnoTime:(NSDate*)date;
+
 @end
