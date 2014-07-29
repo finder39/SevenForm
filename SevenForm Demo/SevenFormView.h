@@ -21,7 +21,7 @@
 - (void)createForm;
 
 #pragma mark - helper methods
-- (void)setContentSizeOfScrollView:(UIScrollView*)scroll;
+- (void)setContentSizeOfSevenFormView;
 - (NSString*)stringAsShortDate:(NSDate*)date;
 - (NSString *)stringAsUTCnoTime:(NSDate*)date;
 

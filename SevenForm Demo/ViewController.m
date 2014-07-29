@@ -83,7 +83,7 @@
     //NSLog(@"%f, %f, %f, %f", scrollView.bounds.origin.x, scrollView.bounds.origin.y, scrollView.bounds.size.width, scrollView.bounds.size.height);
   }
   
-  [sevenForm setContentSizeOfScrollView:sevenForm];
+  [sevenForm setContentSizeOfSevenFormView];
   [sevenForm setScrollEnabled:TRUE];
 }
 

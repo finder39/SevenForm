@@ -419,49 +419,44 @@
 
 #pragma mark - helper methods
 
-- (void)setContentSizeOfScrollView:(UIScrollView*)scroll {
+- (void)setContentSizeOfSevenFormView {
   BOOL restoreHorizontal = NO;
   BOOL restoreVertical = NO;
   
-  if ([scroll respondsToSelector:@selector(setShowsHorizontalScrollIndicator:)] && [scroll respondsToSelector:@selector(setShowsVerticalScrollIndicator:)])
-  {
-    if ([scroll showsHorizontalScrollIndicator])
-    {
+  if ([self respondsToSelector:@selector(setShowsHorizontalScrollIndicator:)] && [self respondsToSelector:@selector(setShowsVerticalScrollIndicator:)]) {
+    if ([self showsHorizontalScrollIndicator]) {
       restoreHorizontal = YES;
-      [scroll setShowsHorizontalScrollIndicator:NO];
+      [self setShowsHorizontalScrollIndicator:NO];
     }
-    if ([scroll showsVerticalScrollIndicator])
-    {
+    if ([self showsVerticalScrollIndicator]) {
       restoreVertical = YES;
-      [scroll setShowsVerticalScrollIndicator:NO];
+      [self setShowsVerticalScrollIndicator:NO];
     }
   }
   CGRect contentRect = CGRectZero;
-  for (UIView *view in scroll.subviews) {
+  for (UIView *view in self.subviews) {
     if (![view isHidden])
       contentRect = CGRectUnion(contentRect, view.frame);
   }
-  if (contentRect.size.height > scroll.frame.size.height)
-    [scroll setScrollEnabled:TRUE];
+  if (contentRect.size.height > self.frame.size.height)
+    [self setScrollEnabled:TRUE];
   else
-    [scroll setScrollEnabled:FALSE];
-  if ([scroll respondsToSelector:@selector(setShowsHorizontalScrollIndicator:)] && [scroll respondsToSelector:@selector(setShowsVerticalScrollIndicator:)])
-  {
+    [self setScrollEnabled:FALSE];
+  if ([self respondsToSelector:@selector(setShowsHorizontalScrollIndicator:)] && [self respondsToSelector:@selector(setShowsVerticalScrollIndicator:)]) {
     if (restoreHorizontal)
     {
-      [scroll setShowsHorizontalScrollIndicator:YES];
+      [self setShowsHorizontalScrollIndicator:YES];
     }
-    if (restoreVertical)
-    {
-      [scroll setShowsVerticalScrollIndicator:YES];
+    if (restoreVertical) {
+      [self setShowsVerticalScrollIndicator:YES];
     }
   }
   contentRect.size.height += 8;
   if (contentRect.origin.y < 0) {
     contentRect.size.height += contentRect.origin.y;
   }
-  scroll.contentSize = contentRect.size;
-  [scroll setCanCancelContentTouches:YES];
+  self.contentSize = contentRect.size;
+  [self setCanCancelContentTouches:YES];
 }
 
 #pragma mark - dates
