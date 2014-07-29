@@ -1,0 +1,471 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D8DEDC591987508500279B04 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8DEDC581987508500279B04 /* Foundation.framework */; };
+		D8DEDC5B1987508500279B04 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8DEDC5A1987508500279B04 /* CoreGraphics.framework */; };
+		D8DEDC5D1987508500279B04 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8DEDC5C1987508500279B04 /* UIKit.framework */; };
+		D8DEDC631987508500279B04 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D8DEDC611987508500279B04 /* InfoPlist.strings */; };
+		D8DEDC651987508500279B04 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D8DEDC641987508500279B04 /* main.m */; };
+		D8DEDC691987508500279B04 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D8DEDC681987508500279B04 /* AppDelegate.m */; };
+		D8DEDC6C1987508500279B04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8DEDC6A1987508500279B04 /* Main.storyboard */; };
+		D8DEDC6F1987508500279B04 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8DEDC6E1987508500279B04 /* ViewController.m */; };
+		D8DEDC711987508500279B04 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8DEDC701987508500279B04 /* Images.xcassets */; };
+		D8DEDC781987508500279B04 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8DEDC771987508500279B04 /* XCTest.framework */; };
+		D8DEDC791987508500279B04 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8DEDC581987508500279B04 /* Foundation.framework */; };
+		D8DEDC7A1987508500279B04 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8DEDC5C1987508500279B04 /* UIKit.framework */; };
+		D8DEDC821987508500279B04 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D8DEDC801987508500279B04 /* InfoPlist.strings */; };
+		D8DEDC841987508500279B04 /* SevenForm_DemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D8DEDC831987508500279B04 /* SevenForm_DemoTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D8DEDC7B1987508500279B04 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D8DEDC4D1987508500279B04 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D8DEDC541987508500279B04;
+			remoteInfo = "SevenForm Demo";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D8DEDC551987508500279B04 /* SevenForm Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SevenForm Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8DEDC581987508500279B04 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D8DEDC5A1987508500279B04 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D8DEDC5C1987508500279B04 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D8DEDC601987508500279B04 /* SevenForm Demo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SevenForm Demo-Info.plist"; sourceTree = "<group>"; };
+		D8DEDC621987508500279B04 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D8DEDC641987508500279B04 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D8DEDC661987508500279B04 /* SevenForm Demo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SevenForm Demo-Prefix.pch"; sourceTree = "<group>"; };
+		D8DEDC671987508500279B04 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D8DEDC681987508500279B04 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D8DEDC6B1987508500279B04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D8DEDC6D1987508500279B04 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		D8DEDC6E1987508500279B04 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D8DEDC701987508500279B04 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		D8DEDC761987508500279B04 /* SevenForm DemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SevenForm DemoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8DEDC771987508500279B04 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		D8DEDC7F1987508500279B04 /* SevenForm DemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SevenForm DemoTests-Info.plist"; sourceTree = "<group>"; };
+		D8DEDC811987508500279B04 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D8DEDC831987508500279B04 /* SevenForm_DemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SevenForm_DemoTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D8DEDC521987508500279B04 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8DEDC5B1987508500279B04 /* CoreGraphics.framework in Frameworks */,
+				D8DEDC5D1987508500279B04 /* UIKit.framework in Frameworks */,
+				D8DEDC591987508500279B04 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8DEDC731987508500279B04 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8DEDC781987508500279B04 /* XCTest.framework in Frameworks */,
+				D8DEDC7A1987508500279B04 /* UIKit.framework in Frameworks */,
+				D8DEDC791987508500279B04 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D8DEDC4C1987508500279B04 = {
+			isa = PBXGroup;
+			children = (
+				D8DEDC5E1987508500279B04 /* SevenForm Demo */,
+				D8DEDC7D1987508500279B04 /* SevenForm DemoTests */,
+				D8DEDC571987508500279B04 /* Frameworks */,
+				D8DEDC561987508500279B04 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D8DEDC561987508500279B04 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D8DEDC551987508500279B04 /* SevenForm Demo.app */,
+				D8DEDC761987508500279B04 /* SevenForm DemoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D8DEDC571987508500279B04 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D8DEDC581987508500279B04 /* Foundation.framework */,
+				D8DEDC5A1987508500279B04 /* CoreGraphics.framework */,
+				D8DEDC5C1987508500279B04 /* UIKit.framework */,
+				D8DEDC771987508500279B04 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D8DEDC5E1987508500279B04 /* SevenForm Demo */ = {
+			isa = PBXGroup;
+			children = (
+				D8DEDC671987508500279B04 /* AppDelegate.h */,
+				D8DEDC681987508500279B04 /* AppDelegate.m */,
+				D8DEDC6A1987508500279B04 /* Main.storyboard */,
+				D8DEDC6D1987508500279B04 /* ViewController.h */,
+				D8DEDC6E1987508500279B04 /* ViewController.m */,
+				D8DEDC701987508500279B04 /* Images.xcassets */,
+				D8DEDC5F1987508500279B04 /* Supporting Files */,
+			);
+			path = "SevenForm Demo";
+			sourceTree = "<group>";
+		};
+		D8DEDC5F1987508500279B04 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D8DEDC601987508500279B04 /* SevenForm Demo-Info.plist */,
+				D8DEDC611987508500279B04 /* InfoPlist.strings */,
+				D8DEDC641987508500279B04 /* main.m */,
+				D8DEDC661987508500279B04 /* SevenForm Demo-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D8DEDC7D1987508500279B04 /* SevenForm DemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				D8DEDC831987508500279B04 /* SevenForm_DemoTests.m */,
+				D8DEDC7E1987508500279B04 /* Supporting Files */,
+			);
+			path = "SevenForm DemoTests";
+			sourceTree = "<group>";
+		};
+		D8DEDC7E1987508500279B04 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D8DEDC7F1987508500279B04 /* SevenForm DemoTests-Info.plist */,
+				D8DEDC801987508500279B04 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D8DEDC541987508500279B04 /* SevenForm Demo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D8DEDC871987508500279B04 /* Build configuration list for PBXNativeTarget "SevenForm Demo" */;
+			buildPhases = (
+				D8DEDC511987508500279B04 /* Sources */,
+				D8DEDC521987508500279B04 /* Frameworks */,
+				D8DEDC531987508500279B04 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SevenForm Demo";
+			productName = "SevenForm Demo";
+			productReference = D8DEDC551987508500279B04 /* SevenForm Demo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D8DEDC751987508500279B04 /* SevenForm DemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D8DEDC8A1987508500279B04 /* Build configuration list for PBXNativeTarget "SevenForm DemoTests" */;
+			buildPhases = (
+				D8DEDC721987508500279B04 /* Sources */,
+				D8DEDC731987508500279B04 /* Frameworks */,
+				D8DEDC741987508500279B04 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D8DEDC7C1987508500279B04 /* PBXTargetDependency */,
+			);
+			name = "SevenForm DemoTests";
+			productName = "SevenForm DemoTests";
+			productReference = D8DEDC761987508500279B04 /* SevenForm DemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D8DEDC4D1987508500279B04 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Joseph Neuman";
+				TargetAttributes = {
+					D8DEDC751987508500279B04 = {
+						TestTargetID = D8DEDC541987508500279B04;
+					};
+				};
+			};
+			buildConfigurationList = D8DEDC501987508500279B04 /* Build configuration list for PBXProject "SevenForm Demo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D8DEDC4C1987508500279B04;
+			productRefGroup = D8DEDC561987508500279B04 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D8DEDC541987508500279B04 /* SevenForm Demo */,
+				D8DEDC751987508500279B04 /* SevenForm DemoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D8DEDC531987508500279B04 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8DEDC711987508500279B04 /* Images.xcassets in Resources */,
+				D8DEDC631987508500279B04 /* InfoPlist.strings in Resources */,
+				D8DEDC6C1987508500279B04 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8DEDC741987508500279B04 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8DEDC821987508500279B04 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D8DEDC511987508500279B04 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8DEDC6F1987508500279B04 /* ViewController.m in Sources */,
+				D8DEDC691987508500279B04 /* AppDelegate.m in Sources */,
+				D8DEDC651987508500279B04 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8DEDC721987508500279B04 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8DEDC841987508500279B04 /* SevenForm_DemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D8DEDC7C1987508500279B04 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D8DEDC541987508500279B04 /* SevenForm Demo */;
+			targetProxy = D8DEDC7B1987508500279B04 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D8DEDC611987508500279B04 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D8DEDC621987508500279B04 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		D8DEDC6A1987508500279B04 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D8DEDC6B1987508500279B04 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D8DEDC801987508500279B04 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D8DEDC811987508500279B04 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D8DEDC851987508500279B04 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D8DEDC861987508500279B04 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D8DEDC881987508500279B04 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SevenForm Demo/SevenForm Demo-Prefix.pch";
+				INFOPLIST_FILE = "SevenForm Demo/SevenForm Demo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		D8DEDC891987508500279B04 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SevenForm Demo/SevenForm Demo-Prefix.pch";
+				INFOPLIST_FILE = "SevenForm Demo/SevenForm Demo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		D8DEDC8B1987508500279B04 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SevenForm Demo.app/SevenForm Demo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SevenForm Demo/SevenForm Demo-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "SevenForm DemoTests/SevenForm DemoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		D8DEDC8C1987508500279B04 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SevenForm Demo.app/SevenForm Demo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SevenForm Demo/SevenForm Demo-Prefix.pch";
+				INFOPLIST_FILE = "SevenForm DemoTests/SevenForm DemoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D8DEDC501987508500279B04 /* Build configuration list for PBXProject "SevenForm Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D8DEDC851987508500279B04 /* Debug */,
+				D8DEDC861987508500279B04 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D8DEDC871987508500279B04 /* Build configuration list for PBXNativeTarget "SevenForm Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D8DEDC881987508500279B04 /* Debug */,
+				D8DEDC891987508500279B04 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D8DEDC8A1987508500279B04 /* Build configuration list for PBXNativeTarget "SevenForm DemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D8DEDC8B1987508500279B04 /* Debug */,
+				D8DEDC8C1987508500279B04 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D8DEDC4D1987508500279B04 /* Project object */;
+}
