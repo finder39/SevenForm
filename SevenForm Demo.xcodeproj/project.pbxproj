@@ -21,6 +21,18 @@
 		D8DEDC7A1987508500279B04 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8DEDC5C1987508500279B04 /* UIKit.framework */; };
 		D8DEDC821987508500279B04 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D8DEDC801987508500279B04 /* InfoPlist.strings */; };
 		D8DEDC841987508500279B04 /* SevenForm_DemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D8DEDC831987508500279B04 /* SevenForm_DemoTests.m */; };
+		D8DEDC9C1987521800279B04 /* UIView+AlterFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = D8DEDC911987521800279B04 /* UIView+AlterFrame.m */; };
+		D8DEDC9D1987521800279B04 /* UIView+AlterFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = D8DEDC911987521800279B04 /* UIView+AlterFrame.m */; };
+		D8DEDC9E1987521800279B04 /* UIView+FindFirstResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = D8DEDC931987521800279B04 /* UIView+FindFirstResponder.m */; };
+		D8DEDC9F1987521800279B04 /* UIView+FindFirstResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = D8DEDC931987521800279B04 /* UIView+FindFirstResponder.m */; };
+		D8DEDCA01987521800279B04 /* SevenFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8DEDC951987521800279B04 /* SevenFormViewController.m */; };
+		D8DEDCA11987521800279B04 /* SevenFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8DEDC951987521800279B04 /* SevenFormViewController.m */; };
+		D8DEDCA21987521800279B04 /* SevenObjectClass.m in Sources */ = {isa = PBXBuildFile; fileRef = D8DEDC971987521800279B04 /* SevenObjectClass.m */; };
+		D8DEDCA31987521800279B04 /* SevenObjectClass.m in Sources */ = {isa = PBXBuildFile; fileRef = D8DEDC971987521800279B04 /* SevenObjectClass.m */; };
+		D8DEDCA41987521800279B04 /* SevenTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = D8DEDC991987521800279B04 /* SevenTextField.m */; };
+		D8DEDCA51987521800279B04 /* SevenTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = D8DEDC991987521800279B04 /* SevenTextField.m */; };
+		D8DEDCA81987569900279B04 /* Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = D8DEDCA71987569900279B04 /* Helpers.m */; };
+		D8DEDCA91987569900279B04 /* Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = D8DEDCA71987569900279B04 /* Helpers.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +65,18 @@
 		D8DEDC7F1987508500279B04 /* SevenForm DemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SevenForm DemoTests-Info.plist"; sourceTree = "<group>"; };
 		D8DEDC811987508500279B04 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D8DEDC831987508500279B04 /* SevenForm_DemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SevenForm_DemoTests.m; sourceTree = "<group>"; };
+		D8DEDC901987521800279B04 /* UIView+AlterFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AlterFrame.h"; sourceTree = "<group>"; };
+		D8DEDC911987521800279B04 /* UIView+AlterFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AlterFrame.m"; sourceTree = "<group>"; };
+		D8DEDC921987521800279B04 /* UIView+FindFirstResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FindFirstResponder.h"; sourceTree = "<group>"; };
+		D8DEDC931987521800279B04 /* UIView+FindFirstResponder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FindFirstResponder.m"; sourceTree = "<group>"; };
+		D8DEDC941987521800279B04 /* SevenFormViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SevenFormViewController.h; sourceTree = "<group>"; };
+		D8DEDC951987521800279B04 /* SevenFormViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SevenFormViewController.m; sourceTree = "<group>"; };
+		D8DEDC961987521800279B04 /* SevenObjectClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SevenObjectClass.h; sourceTree = "<group>"; };
+		D8DEDC971987521800279B04 /* SevenObjectClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SevenObjectClass.m; sourceTree = "<group>"; };
+		D8DEDC981987521800279B04 /* SevenTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SevenTextField.h; sourceTree = "<group>"; };
+		D8DEDC991987521800279B04 /* SevenTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SevenTextField.m; sourceTree = "<group>"; };
+		D8DEDCA61987569900279B04 /* Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Helpers.h; sourceTree = "<group>"; };
+		D8DEDCA71987569900279B04 /* Helpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Helpers.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +136,13 @@
 		D8DEDC5E1987508500279B04 /* SevenForm Demo */ = {
 			isa = PBXGroup;
 			children = (
+				D8DEDC8D1987521800279B04 /* Helpers */,
+				D8DEDC941987521800279B04 /* SevenFormViewController.h */,
+				D8DEDC951987521800279B04 /* SevenFormViewController.m */,
+				D8DEDC961987521800279B04 /* SevenObjectClass.h */,
+				D8DEDC971987521800279B04 /* SevenObjectClass.m */,
+				D8DEDC981987521800279B04 /* SevenTextField.h */,
+				D8DEDC991987521800279B04 /* SevenTextField.m */,
 				D8DEDC671987508500279B04 /* AppDelegate.h */,
 				D8DEDC681987508500279B04 /* AppDelegate.m */,
 				D8DEDC6A1987508500279B04 /* Main.storyboard */,
@@ -150,6 +181,19 @@
 				D8DEDC801987508500279B04 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D8DEDC8D1987521800279B04 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				D8DEDC901987521800279B04 /* UIView+AlterFrame.h */,
+				D8DEDC911987521800279B04 /* UIView+AlterFrame.m */,
+				D8DEDC921987521800279B04 /* UIView+FindFirstResponder.h */,
+				D8DEDC931987521800279B04 /* UIView+FindFirstResponder.m */,
+				D8DEDCA61987569900279B04 /* Helpers.h */,
+				D8DEDCA71987569900279B04 /* Helpers.m */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,7 +293,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8DEDCA01987521800279B04 /* SevenFormViewController.m in Sources */,
+				D8DEDC9E1987521800279B04 /* UIView+FindFirstResponder.m in Sources */,
+				D8DEDCA41987521800279B04 /* SevenTextField.m in Sources */,
+				D8DEDCA21987521800279B04 /* SevenObjectClass.m in Sources */,
 				D8DEDC6F1987508500279B04 /* ViewController.m in Sources */,
+				D8DEDC9C1987521800279B04 /* UIView+AlterFrame.m in Sources */,
+				D8DEDCA81987569900279B04 /* Helpers.m in Sources */,
 				D8DEDC691987508500279B04 /* AppDelegate.m in Sources */,
 				D8DEDC651987508500279B04 /* main.m in Sources */,
 			);
@@ -259,7 +309,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8DEDC9F1987521800279B04 /* UIView+FindFirstResponder.m in Sources */,
+				D8DEDCA11987521800279B04 /* SevenFormViewController.m in Sources */,
+				D8DEDCA51987521800279B04 /* SevenTextField.m in Sources */,
+				D8DEDCA31987521800279B04 /* SevenObjectClass.m in Sources */,
 				D8DEDC841987508500279B04 /* SevenForm_DemoTests.m in Sources */,
+				D8DEDC9D1987521800279B04 /* UIView+AlterFrame.m in Sources */,
+				D8DEDCA91987569900279B04 /* Helpers.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,7 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SevenFormViewController.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController {
+  BOOL _keyboardVisible;
+  BOOL popAfterSave;
+}
+
+@property (nonatomic, weak) IBOutlet UIScrollView *scrollView;
+@property (nonatomic, strong) SevenFormViewController *sevenForm;
+
+- (IBAction)actionSave:(id)sender;
+- (IBAction)actionLeftSideButtonPress:(id)sender;
 
 @end
