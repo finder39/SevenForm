@@ -58,9 +58,7 @@
     [[[sevenForm arrayOfObjectsToUse] lastObject] setAutocapitalizationType:UITextAutocapitalizationTypeWords];
     [[[sevenForm arrayOfObjectsToUse] lastObject] setAutocorrectionType:UITextAutocorrectionTypeNo];
     [[sevenForm arrayOfObjectsToUse] addObject:[[SevenObjectClass alloc] initFieldWithTitle:nil value:nil placeholder:@"City" key:@"city"]];
-    [[sevenForm arrayOfObjectsToUse] addObject:[[SevenObjectClass alloc] initPickerFieldWithTitle:nil value:nil placeholder:@"State" items:@[@[@"",@"AK",@"AL",@"AR",@"AS",@"AZ",@"CA",@"CO",@"CT",@"DC",@"DE",@"FL",@"GA",@"GU",@"HI",@"IA",@"ID",
-                                                                                                                                                                                                        @"IL",@"IN",@"KS",@"KY",@"LA",@"MA",@"MD",@"ME",@"MH",@"MI",@"MN",@"MO",@"MS",@"MT",@"NC",@"ND",@"NE",@"NH",@"NJ",@"NM",@"NV",@"NY",
-                                                                                                                                                                                                        @"OH",@"OK",@"OR",@"PA",@"PR",@"PW",@"RI",@"SC",@"SD",@"TN",@"TX",@"UT",@"VA",@"VI",@"VT",@"WA",@"WI",@"WV",@"WY"]] key:@"state"]];
+    [[sevenForm arrayOfObjectsToUse] addObject:[[SevenObjectClass alloc] initPickerFieldWithTitle:nil value:nil placeholder:@"State" items:@[@[@"",@"AK",@"AL",@"AR",@"AS",@"AZ",@"CA",@"CO",@"CT",@"DC",@"DE",@"FL",@"GA",@"GU",@"HI",@"IA",@"ID",@"IL",@"IN",@"KS",@"KY",@"LA",@"MA",@"MD",@"ME",@"MH",@"MI",@"MN",@"MO",@"MS",@"MT",@"NC",@"ND",@"NE",@"NH",@"NJ",@"NM",@"NV",@"NY",@"OH",@"OK",@"OR",@"PA",@"PR",@"PW",@"RI",@"SC",@"SD",@"TN",@"TX",@"UT",@"VA",@"VI",@"VT",@"WA",@"WI",@"WV",@"WY"]] key:@"state"]];
     [[sevenForm arrayOfObjectsToUse] addObject:[[SevenObjectClass alloc] initFieldWithTitle:nil value:nil placeholder:@"Zip Code" key:@"zip"]];
     [[[sevenForm arrayOfObjectsToUse] lastObject] setKeyboardType:UIKeyboardTypeNumberPad];
     
