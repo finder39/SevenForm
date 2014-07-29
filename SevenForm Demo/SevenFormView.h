@@ -1,5 +1,5 @@
 //
-//  SevenFormViewController.h
+//  SevenFormView.h
 //  Strive
 //
 //  Created by Joseph Neuman on 9/4/13.
@@ -10,11 +10,10 @@
 #import "SevenTextField.h"
 #import "SevenObjectClass.h"
 
-@interface SevenFormViewController : UIViewController <UITextFieldDelegate, UIPickerViewDataSource, UIPickerViewDelegate> {
+@interface SevenFormView : UIScrollView <UITextFieldDelegate, UIPickerViewDataSource, UIPickerViewDelegate> {
   
 }
 
-@property (nonatomic, weak) UIScrollView *scrollView;
 @property (nonatomic, strong) NSMutableArray *arrayOfObjectsToUse;
 @property (nonatomic, strong) NSMutableArray *arrayOfPlacedFields;
 

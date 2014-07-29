@@ -16,7 +16,6 @@
 
 @implementation ViewController
 
-@synthesize scrollView;
 @synthesize sevenForm;
 
 - (void)viewDidLoad
@@ -30,10 +29,7 @@
 - (void)viewWillAppear:(BOOL)animated {
   [super viewWillAppear:animated];
   
-  if (sevenForm == nil) {
-    
-    sevenForm = [SevenFormViewController new];
-    
+  if (sevenForm.arrayOfObjectsToUse.count == 0) {
     [[sevenForm arrayOfObjectsToUse] addObject:[[SevenObjectClass alloc] initHeaderWithTitle:@"Personal Information"]];
     [[sevenForm arrayOfObjectsToUse] addObject:[[SevenObjectClass alloc] initFieldWithTitle:nil value:nil placeholder:@"First Name" key:@"firstName"]];
     [[[sevenForm arrayOfObjectsToUse] lastObject] setAutocapitalizationType:UITextAutocapitalizationTypeWords];
@@ -79,9 +75,8 @@
     [[sevenForm arrayOfObjectsToUse] addObject:[[SevenObjectClass alloc] initFieldWithTitle:nil value:nil placeholder:@"optional" key:@"specialConsiderations"]]; // TODO make this multiline
     [[[sevenForm arrayOfObjectsToUse] lastObject] setAutocapitalizationType:UITextAutocapitalizationTypeSentences];
     
-    [self.scrollView addSubview:[sevenForm view]];
-    [sevenForm setScrollView:self.scrollView];
     [sevenForm createForm];
+    NSLog(@"%i", sevenForm.arrayOfObjectsToUse.count);
     
     //NSLog(@"%f, %f, %f, %f", sevenForm.view.frame.origin.x, sevenForm.view.frame.origin.y, sevenForm.view.frame.size.width, sevenForm.view.frame.size.height);
     //NSLog(@"%f, %f, %f, %f", sevenForm.view.bounds.origin.x, sevenForm.view.bounds.origin.y, sevenForm.view.bounds.size.width, sevenForm.view.bounds.size.height);
@@ -89,8 +84,8 @@
     //NSLog(@"%f, %f, %f, %f", scrollView.bounds.origin.x, scrollView.bounds.origin.y, scrollView.bounds.size.width, scrollView.bounds.size.height);
   }
   
-  [Helpers setContentSizeOfScrollView:scrollView];
-  [scrollView setScrollEnabled:TRUE];
+  [Helpers setContentSizeOfScrollView:sevenForm];
+  [sevenForm setScrollEnabled:TRUE];
 }
 
 - (void)didReceiveMemoryWarning
@@ -118,9 +113,9 @@
   [UIView animateWithDuration:animationDuration delay:0 options:animationCurve
                    animations:^{
                      CGRect keyboardFrame = [self.view convertRect:keyboardEndFrame toView:nil];
-                     const UIEdgeInsets oldInset = self.scrollView.contentInset;
-                     self.scrollView.contentInset = UIEdgeInsetsMake(oldInset.top, oldInset.left,  up ? keyboardFrame.size.height : 0, oldInset.right);
-                     self.scrollView.scrollIndicatorInsets = self.scrollView.contentInset;
+                     const UIEdgeInsets oldInset = self.sevenForm.contentInset;
+                     self.sevenForm.contentInset = UIEdgeInsetsMake(oldInset.top, oldInset.left,  up ? keyboardFrame.size.height : 0, oldInset.right);
+                     self.sevenForm.scrollIndicatorInsets = self.sevenForm.contentInset;
                      if (up) {
                        [[(UITextField*)[self.view findFirstResponder] delegate] textFieldDidBeginEditing:(UITextField*)[self.view findFirstResponder]];
                      }

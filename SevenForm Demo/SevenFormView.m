@@ -1,21 +1,21 @@
 //
-//  SevenFormViewController.m
+//  SevenFormView.m
 //  Strive
 //
 //  Created by Joseph Neuman on 9/4/13.
 //  Copyright (c) 2013 Joseph Neuman. All rights reserved.
 //
 
-#import "SevenFormViewController.h"
+#import "SevenFormView.h"
 #import "UIView+FindFirstResponder.h"
 #import "UIView+AlterFrame.h"
 #import "Helpers.h"
 
-@interface SevenFormViewController ()
+@interface SevenFormView ()
 
 @end
 
-@implementation SevenFormViewController
+@implementation SevenFormView
 
 @synthesize arrayOfObjectsToUse;
 @synthesize arrayOfPlacedFields;
@@ -48,7 +48,7 @@
             [labelHeader setFont:[UIFont fontWithName:@"Helvetica-Light" size:23.0]];
             [labelHeader setBackgroundColor:[UIColor clearColor]];
             [labelHeader setTextColor:[UIColor colorWithRed:69.0/255.0 green:71.0/255.0 blue:77.0/255.0 alpha:1]];
-            [self.view addSubview:labelHeader];
+            [self addSubview:labelHeader];
             
             originY += 39;
             
@@ -56,7 +56,7 @@
             UIImageView *imageDividerLine = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"FullScreenDivider_V2.png"]];
             [imageDividerLine setAutoresizingMask:(UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleWidth)];
             [imageDividerLine setFrameOriginY:originY];
-            [self.view addSubview:imageDividerLine];
+            [self addSubview:imageDividerLine];
             
             originY += 9;
         } else if ([theSevenObject isDatePicker]) {
@@ -92,7 +92,7 @@
             
             [field setSevenObject:theSevenObject];
             [arrayOfPlacedFields addObject:field];
-            [self.view addSubview:field];
+            [self addSubview:field];
             
             originY += field.frame.size.height+4;
             
@@ -100,7 +100,7 @@
             UIImageView *imageDividerLine = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"FullScreenDivider_V2.png"]];
             [imageDividerLine setAutoresizingMask:(UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleWidth)];
             [imageDividerLine setFrameOriginY:originY];
-            [self.view addSubview:imageDividerLine];
+            [self addSubview:imageDividerLine];
             
             tagField += 1;
             originY += 9;
@@ -130,7 +130,7 @@
             
             [field setSevenObject:theSevenObject];
             [arrayOfPlacedFields addObject:field];
-            [self.view addSubview:field];
+            [self addSubview:field];
             
             originY += field.frame.size.height+4;
             
@@ -138,7 +138,7 @@
             UIImageView *imageDividerLine = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"FullScreenDivider_V2.png"]];
             [imageDividerLine setAutoresizingMask:(UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleWidth)];
             [imageDividerLine setFrameOriginY:originY];
-            [self.view addSubview:imageDividerLine];
+            [self addSubview:imageDividerLine];
             
             tagField += 1;
             originY += 9;
@@ -164,7 +164,7 @@
             
             [field setSevenObject:theSevenObject];
             [arrayOfPlacedFields addObject:field];
-            [self.view addSubview:field];
+            [self addSubview:field];
             
             originY += field.frame.size.height+4;
             
@@ -172,7 +172,7 @@
             UIImageView *imageDividerLine = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"FullScreenDivider_V2.png"]];
             [imageDividerLine setAutoresizingMask:(UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleWidth)];
             [imageDividerLine setFrameOriginY:originY];
-            [self.view addSubview:imageDividerLine];
+            [self addSubview:imageDividerLine];
             
             tagField += 1;
             originY += 9;
@@ -184,9 +184,9 @@
     [[arrayOfPlacedFields lastObject] setReturnKeyType:UIReturnKeyDone];
     
     CGRect contentRect = CGRectZero;
-    for (UIView *view in self.view.subviews)
+    for (UIView *view in self.subviews)
         contentRect = CGRectUnion(contentRect, view.frame);
-    [self.view setFrame:contentRect];
+    [self setFrame:contentRect];
     
     [self setupAfterFieldsAreCreated];
 }
@@ -195,7 +195,7 @@
 
 - (IBAction)actionKeyboardButton:(UIBarButtonItem*)sender {
     /*NSMutableArray *arrayOfTextFields = [NSMutableArray new];
-    for (UIView *theView in self.view.subviews) {
+    for (UIView *theView in self.subviews) {
         if ([theView isKindOfClass:[UITextField class]]) {
             UITextField *theTextField = (UITextField*)theView;
             [arrayOfTextFields addObject:theTextField];
@@ -207,7 +207,7 @@
     arrayOfTextFields = [[arrayOfTextFields sortedArrayUsingDescriptors:[NSArray arrayWithObject:ascendingSort]] mutableCopy];
      */
     
-    UIView *currentFirstResponder = [self.view findFirstResponder];
+    UIView *currentFirstResponder = [self findFirstResponder];
     UIView* nextResponder;
     
     if ([[sender title] isEqualToString:@"Previous"]) {
@@ -233,7 +233,7 @@
 
 -(void)setupAfterFieldsAreCreated {
     // keyboard toolbar
-    UIToolbar *keyboardToolbar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 44)];
+    UIToolbar *keyboardToolbar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 0, self.bounds.size.width, 44)];
     [keyboardToolbar setTintColor:[UIColor blackColor]];
     
     UIBarButtonItem *previousButton = [[UIBarButtonItem alloc] initWithTitle:@"Previous" style:UIBarButtonItemStyleBordered target:self action:@selector(actionKeyboardButton:)];
@@ -244,8 +244,8 @@
     UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(actionKeyboardButton:)];
     
     [keyboardToolbar setItems:[NSArray arrayWithObjects:previousButton, nextButton, extraSpace, doneButton, nil]];
-    
-    for (UIView *theView in self.view.subviews) {
+  
+    for (UIView *theView in self.subviews) {
         if ([theView isKindOfClass:[UITextField class]]) {
             UITextField *theTextField = (UITextField*)theView;
             [theTextField setInputAccessoryView:keyboardToolbar];
@@ -368,17 +368,17 @@
 
 - (void)textFieldDidBeginEditing:(SevenTextField *)textField {
     /*if (textField == nil) {
-        if ([[self.view findFirstResonder] isKindOfClass:[SevenTextField class]]) {
-            textField = (SevenTextField*)[self.view findFirstResonder];
+        if ([[self findFirstResonder] isKindOfClass:[SevenTextField class]]) {
+            textField = (SevenTextField*)[self findFirstResonder];
         } else {
             return;
         }
     }*/
     
-    [(UIScrollView*)[self.view superview] scrollRectToVisible:[textField frame] animated:YES];
+    [self scrollRectToVisible:[textField frame] animated:YES];
     
     NSMutableArray *arrayOfTextFields = [NSMutableArray new];
-    for (UIView *theView in self.view.subviews) {
+    for (UIView *theView in self.subviews) {
         if ([theView isKindOfClass:[UITextField class]]) {
             UITextField *theTextField = (UITextField*)theView;
             [arrayOfTextFields addObject:theTextField];
@@ -405,17 +405,9 @@
         if ([textField sevenObject].value != nil) {
             [self setPickerViewValue:[textField sevenObject].value forSevenField:textField];
         }
-        if (UIDeviceOrientationIsPortrait(self.interfaceOrientation)) {
-            [[textField inputView] setFrame:CGRectMake(0, 40, self.view.frame.size.width, 216)];
-        } else {
-            [[textField inputView] setFrame:CGRectMake(0, 40, self.view.frame.size.width, 162)];
-        }
+        [[textField inputView] setFrame:CGRectMake(0, 40, self.frame.size.width, [textField inputView].frame.size.height)];
     } else if ([[textField inputView] isKindOfClass:[UIDatePicker class]]) {
-        if (UIDeviceOrientationIsPortrait(self.interfaceOrientation)) {
-            [[textField inputView] setFrame:CGRectMake(0, 40, self.view.frame.size.width, 216)];
-        } else {
-            [[textField inputView] setFrame:CGRectMake(0, 40, self.view.frame.size.width, 162)];
-        }
+        [[textField inputView] setFrame:CGRectMake(0, 40, self.frame.size.width, [textField inputView].frame.size.height)];
     }
 }
 
@@ -428,27 +420,23 @@
 
 #pragma mark - lifecycle
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-        arrayOfObjectsToUse = [NSMutableArray new];
-        arrayOfPlacedFields = [NSMutableArray new];
-    }
-    return self;
+- (void)initialize {
+  arrayOfObjectsToUse = [NSMutableArray new];
+  arrayOfPlacedFields = [NSMutableArray new];
 }
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-	// Do any additional setup after loading the view.
+- (id)initWithCoder:(NSCoder *)aCoder {
+  if(self = [super initWithCoder:aCoder]){
+    [self initialize];
+  }
+  return self;
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (id)initWithFrame:(CGRect)rect {
+  if(self = [super initWithFrame:rect]){
+    [self initialize];
+  }
+  return self;
 }
 
 @end
