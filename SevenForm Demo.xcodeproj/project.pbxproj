@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D8577F171987632F0046D9AE /* FullScreenDivider_V2.png in Resources */ = {isa = PBXBuildFile; fileRef = D8577F151987632F0046D9AE /* FullScreenDivider_V2.png */; };
+		D8577F181987632F0046D9AE /* FullScreenDivider_V2.png in Resources */ = {isa = PBXBuildFile; fileRef = D8577F151987632F0046D9AE /* FullScreenDivider_V2.png */; };
+		D8577F191987632F0046D9AE /* FullScreenDivider_V2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8577F161987632F0046D9AE /* FullScreenDivider_V2@2x.png */; };
+		D8577F1A1987632F0046D9AE /* FullScreenDivider_V2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D8577F161987632F0046D9AE /* FullScreenDivider_V2@2x.png */; };
 		D8DEDC591987508500279B04 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8DEDC581987508500279B04 /* Foundation.framework */; };
 		D8DEDC5B1987508500279B04 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8DEDC5A1987508500279B04 /* CoreGraphics.framework */; };
 		D8DEDC5D1987508500279B04 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8DEDC5C1987508500279B04 /* UIKit.framework */; };
@@ -46,6 +50,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D8577F151987632F0046D9AE /* FullScreenDivider_V2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FullScreenDivider_V2.png; sourceTree = "<group>"; };
+		D8577F161987632F0046D9AE /* FullScreenDivider_V2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FullScreenDivider_V2@2x.png"; sourceTree = "<group>"; };
 		D8DEDC551987508500279B04 /* SevenForm Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SevenForm Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8DEDC581987508500279B04 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D8DEDC5A1987508500279B04 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -103,6 +109,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D8577F14198762F60046D9AE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D8577F151987632F0046D9AE /* FullScreenDivider_V2.png */,
+				D8577F161987632F0046D9AE /* FullScreenDivider_V2@2x.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		D8DEDC4C1987508500279B04 = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +151,7 @@
 		D8DEDC5E1987508500279B04 /* SevenForm Demo */ = {
 			isa = PBXGroup;
 			children = (
+				D8577F14198762F60046D9AE /* Resources */,
 				D8DEDC8D1987521800279B04 /* Helpers */,
 				D8DEDC941987521800279B04 /* SevenFormViewController.h */,
 				D8DEDC951987521800279B04 /* SevenFormViewController.m */,
@@ -272,6 +288,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8577F171987632F0046D9AE /* FullScreenDivider_V2.png in Resources */,
+				D8577F191987632F0046D9AE /* FullScreenDivider_V2@2x.png in Resources */,
 				D8DEDC711987508500279B04 /* Images.xcassets in Resources */,
 				D8DEDC631987508500279B04 /* InfoPlist.strings in Resources */,
 				D8DEDC6C1987508500279B04 /* Main.storyboard in Resources */,
@@ -282,7 +300,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8577F181987632F0046D9AE /* FullScreenDivider_V2.png in Resources */,
 				D8DEDC821987508500279B04 /* InfoPlist.strings in Resources */,
+				D8577F1A1987632F0046D9AE /* FullScreenDivider_V2@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -512,6 +532,7 @@
 				D8DEDC891987508500279B04 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D8DEDC8A1987508500279B04 /* Build configuration list for PBXNativeTarget "SevenForm DemoTests" */ = {
 			isa = XCConfigurationList;
@@ -520,6 +541,7 @@
 				D8DEDC8C1987508500279B04 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
