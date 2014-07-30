@@ -54,7 +54,7 @@ float fieldFontSize = 18.0;
             else
                 originY += 30;
             
-            UILabel *labelHeader = [[UILabel alloc] initWithFrame:CGRectMake(15, originY, 293, 31)];;
+            UILabel *labelHeader = [[UILabel alloc] initWithFrame:CGRectMake(15, originY, self.bounds.size.width-15, 31)];
             [labelHeader setText:[theSevenObject title]];
             [labelHeader setFont:[UIFont fontWithName:headerFontName size:headerFontSize]];
             [labelHeader setBackgroundColor:[UIColor clearColor]];
@@ -69,7 +69,7 @@ float fieldFontSize = 18.0;
             originY += 9;
         } else if ([theSevenObject isDatePicker]) {
             // field
-            SevenTextField *field = [[SevenTextField alloc] initWithFrame:CGRectMake(14, originY, 293, 30)];
+            SevenTextField *field = [[SevenTextField alloc] initWithFrame:CGRectMake(14, originY, self.bounds.size.width-14, 30)];
             [field setAutoresizingMask:(UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleWidth)];
             [field setDelegate:self];
             [field setBorderStyle:UITextBorderStyleNone];
@@ -111,7 +111,7 @@ float fieldFontSize = 18.0;
             originY += 9;
         } else if ([theSevenObject isPicker]) {
             // field
-            SevenTextField *field = [[SevenTextField alloc] initWithFrame:CGRectMake(14, originY, 293, 30)];
+            SevenTextField *field = [[SevenTextField alloc] initWithFrame:CGRectMake(14, originY, self.bounds.size.width-14, 30)];
             [field setAutoresizingMask:(UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleWidth)];
             [field setDelegate:self];
             [field setBorderStyle:UITextBorderStyleNone];
@@ -146,7 +146,7 @@ float fieldFontSize = 18.0;
             originY += 9;
         } else {
             // field
-            SevenTextField *field = [[SevenTextField alloc] initWithFrame:CGRectMake(14, originY, 293, 30)];
+            SevenTextField *field = [[SevenTextField alloc] initWithFrame:CGRectMake(14, originY, self.bounds.size.width-14, 30)];
             [field setAutoresizingMask:(UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleWidth)];
             [field setDelegate:self];
             [field setBorderStyle:UITextBorderStyleNone];
@@ -419,7 +419,7 @@ float fieldFontSize = 18.0;
 #pragma mark - helper methods
 
 - (UIView*)createDividerViewWith:(float)originY {
-  UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, originY, 320, 1)];
+  UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, originY, self.bounds.size.width, 1)];
   [view setBackgroundColor:dividerColor];
   [view setAutoresizingMask:(UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleWidth)];
   return view;
