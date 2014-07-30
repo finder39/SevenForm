@@ -21,6 +21,7 @@
 
 
 UIColor *textColor;
+UIColor *dividerColor;
 
 // header vars
 NSString *headerFontName = @"Helvetica-Light";
@@ -63,10 +64,7 @@ float fieldFontSize = 18.0;
             originY += 39;
             
             // divider line
-            UIImageView *imageDividerLine = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"FullScreenDivider_V2.png"]];
-            [imageDividerLine setAutoresizingMask:(UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleWidth)];
-            [imageDividerLine setFrameOriginY:originY];
-            [self addSubview:imageDividerLine];
+            [self addSubview:[self createDividerViewWith:originY]];
             
             originY += 9;
         } else if ([theSevenObject isDatePicker]) {
@@ -107,10 +105,7 @@ float fieldFontSize = 18.0;
             originY += field.frame.size.height+4;
             
             // divider line
-            UIImageView *imageDividerLine = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"FullScreenDivider_V2.png"]];
-            [imageDividerLine setAutoresizingMask:(UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleWidth)];
-            [imageDividerLine setFrameOriginY:originY];
-            [self addSubview:imageDividerLine];
+            [self addSubview:[self createDividerViewWith:originY]];
             
             tagField += 1;
             originY += 9;
@@ -145,10 +140,7 @@ float fieldFontSize = 18.0;
             originY += field.frame.size.height+4;
             
             // divider line
-            UIImageView *imageDividerLine = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"FullScreenDivider_V2.png"]];
-            [imageDividerLine setAutoresizingMask:(UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleWidth)];
-            [imageDividerLine setFrameOriginY:originY];
-            [self addSubview:imageDividerLine];
+            [self addSubview:[self createDividerViewWith:originY]];
             
             tagField += 1;
             originY += 9;
@@ -179,10 +171,7 @@ float fieldFontSize = 18.0;
             originY += field.frame.size.height+4;
             
             // divider line
-            UIImageView *imageDividerLine = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"FullScreenDivider_V2.png"]];
-            [imageDividerLine setAutoresizingMask:(UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleWidth)];
-            [imageDividerLine setFrameOriginY:originY];
-            [self addSubview:imageDividerLine];
+            [self addSubview:[self createDividerViewWith:originY]];
             
             tagField += 1;
             originY += 9;
@@ -361,8 +350,7 @@ float fieldFontSize = 18.0;
 
 #pragma mark - UITextFieldDelegate
 
--(BOOL)textFieldShouldReturn:(UITextField*)textField;
-{
+- (BOOL)textFieldShouldReturn:(UITextField*)textField;{
     NSInteger nextTag = textField.tag + 1;
     // Try to find next responder
     UIResponder* nextResponder = [textField.superview viewWithTag:nextTag];
@@ -429,6 +417,13 @@ float fieldFontSize = 18.0;
 }
 
 #pragma mark - helper methods
+
+- (UIView*)createDividerViewWith:(float)originY {
+  UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, originY, 320, 1)];
+  [view setBackgroundColor:dividerColor];
+  [view setAutoresizingMask:(UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleWidth)];
+  return view;
+}
 
 - (void)setContentSizeOfSevenFormView {
   BOOL restoreHorizontal = NO;
@@ -498,6 +493,7 @@ float fieldFontSize = 18.0;
   arrayOfObjectsToUse = [NSMutableArray new];
   arrayOfPlacedFields = [NSMutableArray new];
   textColor = [UIColor colorWithRed:69.0/255.0 green:71.0/255.0 blue:77.0/255.0 alpha:1];
+  dividerColor = [UIColor colorWithRed:188/255.0 green:189/255.0 blue:192/255.0 alpha:1];
 }
 
 - (id)initWithCoder:(NSCoder *)aCoder {
