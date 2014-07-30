@@ -73,15 +73,7 @@
     [[[sevenForm arrayOfObjectsToUse] lastObject] setAutocapitalizationType:UITextAutocapitalizationTypeSentences];
     
     [sevenForm createForm];
-    
-    //NSLog(@"%f, %f, %f, %f", sevenForm.view.frame.origin.x, sevenForm.view.frame.origin.y, sevenForm.view.frame.size.width, sevenForm.view.frame.size.height);
-    //NSLog(@"%f, %f, %f, %f", sevenForm.view.bounds.origin.x, sevenForm.view.bounds.origin.y, sevenForm.view.bounds.size.width, sevenForm.view.bounds.size.height);
-    //NSLog(@"%f, %f, %f, %f", scrollView.frame.origin.x, scrollView.frame.origin.y, scrollView.frame.size.width, scrollView.frame.size.height);
-    //NSLog(@"%f, %f, %f, %f", scrollView.bounds.origin.x, scrollView.bounds.origin.y, scrollView.bounds.size.width, scrollView.bounds.size.height);
   }
-  
-  [sevenForm setContentSizeOfSevenFormView];
-  [sevenForm setScrollEnabled:TRUE];
 }
 
 - (void)didReceiveMemoryWarning

@@ -188,6 +188,8 @@ float fieldFontSize = 18.0;
     [self setFrame:contentRect];
     
     [self setupAfterFieldsAreCreated];
+    [self setContentSizeOfSevenFormView];
+    [self setScrollEnabled:true];
 }
 
 #pragma mark - keyboard stuff

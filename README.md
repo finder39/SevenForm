@@ -34,9 +34,6 @@ sevenForm = [SevenFormViewController new];
 [[sevenForm arrayOfObjectsToUse] addObject:[[SevenObject alloc] initPickerFieldWithTitle:nil value:nil placeholder:@"Gender" items:@[@[@"", @"F", @"M"]] key:@"gender"]];
 
 [sevenForm createForm];
-
-// set appropriate content size
-[sevenForm setContentSizeOfSevenFormView];
 ```
 ##### Code
 ```objc
@@ -54,7 +51,4 @@ SevenForm *sevenForm = [SevenFormViewController new];
 [[sevenForm arrayOfObjectsToUse] addObject:[[SevenObject alloc] initPickerFieldWithTitle:nil value:nil placeholder:@"Gender" items:@[@[@"", @"F", @"M"]] key:@"gender"]];
 
 [sevenForm createForm];
-
-// set appropriate content size
-[sevenForm setContentSizeOfSevenFormView];
 ```
