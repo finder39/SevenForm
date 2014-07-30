@@ -19,6 +19,17 @@
 @synthesize arrayOfObjectsToUse;
 @synthesize arrayOfPlacedFields;
 
+
+UIColor *textColor;
+
+// header vars
+NSString *headerFontName = @"Helvetica-Light";
+float headerFontSize = 23.0;
+
+// field vars
+NSString *fieldFontName = @"Helvetica-Light";
+float fieldFontSize = 18.0;
+
 #pragma mark - create form
 
 - (SevenObjectClass*)getSevenObjectWithKey:(NSString*)key {
@@ -44,9 +55,9 @@
             
             UILabel *labelHeader = [[UILabel alloc] initWithFrame:CGRectMake(15, originY, 293, 31)];;
             [labelHeader setText:[theSevenObject title]];
-            [labelHeader setFont:[UIFont fontWithName:@"Helvetica-Light" size:23.0]];
+            [labelHeader setFont:[UIFont fontWithName:headerFontName size:headerFontSize]];
             [labelHeader setBackgroundColor:[UIColor clearColor]];
-            [labelHeader setTextColor:[UIColor colorWithRed:69.0/255.0 green:71.0/255.0 blue:77.0/255.0 alpha:1]];
+            [labelHeader setTextColor:textColor];
             [self addSubview:labelHeader];
             
             originY += 39;
@@ -66,8 +77,8 @@
             [field setBorderStyle:UITextBorderStyleNone];
             [field setContentVerticalAlignment:UIControlContentVerticalAlignmentCenter];
             [field setTag:tagField];
-            [field setFont:[UIFont fontWithName:@"Helvetica-Light" size:18.0]];
-            [field setTextColor:[UIColor colorWithRed:69.0/255.0 green:71.0/255.0 blue:77.0/255.0 alpha:1]];
+            [field setFont:[UIFont fontWithName:fieldFontName size:fieldFontSize]];
+            [field setTextColor:textColor];
             [field setReturnKeyType:UIReturnKeyNext];
             
             if ([theSevenObject dateValue] != nil) {
@@ -111,8 +122,8 @@
             [field setBorderStyle:UITextBorderStyleNone];
             [field setContentVerticalAlignment:UIControlContentVerticalAlignmentCenter];
             [field setTag:tagField];
-            [field setFont:[UIFont fontWithName:@"Helvetica-Light" size:18.0]];
-            [field setTextColor:[UIColor colorWithRed:69.0/255.0 green:71.0/255.0 blue:77.0/255.0 alpha:1]];
+            [field setFont:[UIFont fontWithName:fieldFontName size:fieldFontSize]];
+            [field setTextColor:textColor];
             [field setReturnKeyType:UIReturnKeyNext];
             
             [field setText:[theSevenObject value]];
@@ -149,8 +160,8 @@
             [field setBorderStyle:UITextBorderStyleNone];
             [field setContentVerticalAlignment:UIControlContentVerticalAlignmentCenter];
             [field setTag:tagField];
-            [field setFont:[UIFont fontWithName:@"Helvetica-Light" size:18.0]];
-            [field setTextColor:[UIColor colorWithRed:69.0/255.0 green:71.0/255.0 blue:77.0/255.0 alpha:1]];
+            [field setFont:[UIFont fontWithName:fieldFontName size:fieldFontSize]];
+            [field setTextColor:textColor];
             [field setReturnKeyType:UIReturnKeyNext];
             
             [field setText:[theSevenObject value]];
@@ -486,6 +497,7 @@
 - (void)initialize {
   arrayOfObjectsToUse = [NSMutableArray new];
   arrayOfPlacedFields = [NSMutableArray new];
+  textColor = [UIColor colorWithRed:69.0/255.0 green:71.0/255.0 blue:77.0/255.0 alpha:1];
 }
 
 - (id)initWithCoder:(NSCoder *)aCoder {
