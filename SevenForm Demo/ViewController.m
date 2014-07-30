@@ -27,49 +27,49 @@
   [super viewWillAppear:animated];
   
   if (sevenForm.arrayOfObjectsToUse.count == 0) {    
-    [[sevenForm arrayOfObjectsToUse] addObject:[[SevenObjectClass alloc] initHeaderWithTitle:@"Personal Information"]];
-    [[sevenForm arrayOfObjectsToUse] addObject:[[SevenObjectClass alloc] initFieldWithTitle:nil value:nil placeholder:@"First Name" key:@"firstName"]];
+    [[sevenForm arrayOfObjectsToUse] addObject:[[SevenObject alloc] initHeaderWithTitle:@"Personal Information"]];
+    [[sevenForm arrayOfObjectsToUse] addObject:[[SevenObject alloc] initFieldWithTitle:nil value:nil placeholder:@"First Name" key:@"firstName"]];
     [[[sevenForm arrayOfObjectsToUse] lastObject] setAutocapitalizationType:UITextAutocapitalizationTypeWords];
     [[[sevenForm arrayOfObjectsToUse] lastObject] setAutocorrectionType:UITextAutocorrectionTypeNo];
-    [[sevenForm arrayOfObjectsToUse] addObject:[[SevenObjectClass alloc] initFieldWithTitle:nil value:nil placeholder:@"Last Name" key:@"lastName"]];
+    [[sevenForm arrayOfObjectsToUse] addObject:[[SevenObject alloc] initFieldWithTitle:nil value:nil placeholder:@"Last Name" key:@"lastName"]];
     [[[sevenForm arrayOfObjectsToUse] lastObject] setAutocapitalizationType:UITextAutocapitalizationTypeWords];
     [[[sevenForm arrayOfObjectsToUse] lastObject] setAutocorrectionType:UITextAutocorrectionTypeNo];
-    [[sevenForm arrayOfObjectsToUse] addObject:[[SevenObjectClass alloc] initDateFieldWithTitle:nil dateValue:nil placeholder:@"Date of Birth" key:@"dob"]];
+    [[sevenForm arrayOfObjectsToUse] addObject:[[SevenObject alloc] initDateFieldWithTitle:nil dateValue:nil placeholder:@"Date of Birth" key:@"dob"]];
     [[[sevenForm arrayOfObjectsToUse] lastObject] setMaximumDate:[NSDate date]];
-    [[sevenForm arrayOfObjectsToUse] addObject:[[SevenObjectClass alloc] initPickerFieldWithTitle:nil value:nil placeholder:@"Gender" items:@[@[@"", @"F", @"M"]] key:@"gender"]];
+    [[sevenForm arrayOfObjectsToUse] addObject:[[SevenObject alloc] initPickerFieldWithTitle:nil value:nil placeholder:@"Gender" items:@[@[@"", @"F", @"M"]] key:@"gender"]];
     
-    [[sevenForm arrayOfObjectsToUse] addObject:[[SevenObjectClass alloc] initHeaderWithTitle:@"Contact Information"]];
-    [[sevenForm arrayOfObjectsToUse] addObject:[[SevenObjectClass alloc] initFieldWithTitle:nil value:nil placeholder:@"Phone Number" key:@"phone"]];
+    [[sevenForm arrayOfObjectsToUse] addObject:[[SevenObject alloc] initHeaderWithTitle:@"Contact Information"]];
+    [[sevenForm arrayOfObjectsToUse] addObject:[[SevenObject alloc] initFieldWithTitle:nil value:nil placeholder:@"Phone Number" key:@"phone"]];
     [[[sevenForm arrayOfObjectsToUse] lastObject] setKeyboardType:UIKeyboardTypePhonePad];
     
-    [[sevenForm arrayOfObjectsToUse] addObject:[[SevenObjectClass alloc] initHeaderWithTitle:@"Address"]];
-    [[sevenForm arrayOfObjectsToUse] addObject:[[SevenObjectClass alloc] initFieldWithTitle:nil value:nil placeholder:@"Address Line 1" key:@"address1"]];
+    [[sevenForm arrayOfObjectsToUse] addObject:[[SevenObject alloc] initHeaderWithTitle:@"Address"]];
+    [[sevenForm arrayOfObjectsToUse] addObject:[[SevenObject alloc] initFieldWithTitle:nil value:nil placeholder:@"Address Line 1" key:@"address1"]];
     [[[sevenForm arrayOfObjectsToUse] lastObject] setAutocapitalizationType:UITextAutocapitalizationTypeWords];
     [[[sevenForm arrayOfObjectsToUse] lastObject] setKeyboardType:UIKeyboardTypeNumbersAndPunctuation];
     [[[sevenForm arrayOfObjectsToUse] lastObject] setAutocorrectionType:UITextAutocorrectionTypeNo];
-    [[sevenForm arrayOfObjectsToUse] addObject:[[SevenObjectClass alloc] initFieldWithTitle:nil value:nil placeholder:@"Address Line 2" key:@"address2"]];
+    [[sevenForm arrayOfObjectsToUse] addObject:[[SevenObject alloc] initFieldWithTitle:nil value:nil placeholder:@"Address Line 2" key:@"address2"]];
     [[[sevenForm arrayOfObjectsToUse] lastObject] setAutocapitalizationType:UITextAutocapitalizationTypeWords];
     [[[sevenForm arrayOfObjectsToUse] lastObject] setAutocorrectionType:UITextAutocorrectionTypeNo];
-    [[sevenForm arrayOfObjectsToUse] addObject:[[SevenObjectClass alloc] initFieldWithTitle:nil value:nil placeholder:@"City" key:@"city"]];
-    [[sevenForm arrayOfObjectsToUse] addObject:[[SevenObjectClass alloc] initPickerFieldWithTitle:nil value:nil placeholder:@"State" items:@[@[@"",@"AK",@"AL",@"AR",@"AS",@"AZ",@"CA",@"CO",@"CT",@"DC",@"DE",@"FL",@"GA",@"GU",@"HI",@"IA",@"ID",@"IL",@"IN",@"KS",@"KY",@"LA",@"MA",@"MD",@"ME",@"MH",@"MI",@"MN",@"MO",@"MS",@"MT",@"NC",@"ND",@"NE",@"NH",@"NJ",@"NM",@"NV",@"NY",@"OH",@"OK",@"OR",@"PA",@"PR",@"PW",@"RI",@"SC",@"SD",@"TN",@"TX",@"UT",@"VA",@"VI",@"VT",@"WA",@"WI",@"WV",@"WY"]] key:@"state"]];
-    [[sevenForm arrayOfObjectsToUse] addObject:[[SevenObjectClass alloc] initFieldWithTitle:nil value:nil placeholder:@"Zip Code" key:@"zip"]];
+    [[sevenForm arrayOfObjectsToUse] addObject:[[SevenObject alloc] initFieldWithTitle:nil value:nil placeholder:@"City" key:@"city"]];
+    [[sevenForm arrayOfObjectsToUse] addObject:[[SevenObject alloc] initPickerFieldWithTitle:nil value:nil placeholder:@"State" items:@[@[@"",@"AK",@"AL",@"AR",@"AS",@"AZ",@"CA",@"CO",@"CT",@"DC",@"DE",@"FL",@"GA",@"GU",@"HI",@"IA",@"ID",@"IL",@"IN",@"KS",@"KY",@"LA",@"MA",@"MD",@"ME",@"MH",@"MI",@"MN",@"MO",@"MS",@"MT",@"NC",@"ND",@"NE",@"NH",@"NJ",@"NM",@"NV",@"NY",@"OH",@"OK",@"OR",@"PA",@"PR",@"PW",@"RI",@"SC",@"SD",@"TN",@"TX",@"UT",@"VA",@"VI",@"VT",@"WA",@"WI",@"WV",@"WY"]] key:@"state"]];
+    [[sevenForm arrayOfObjectsToUse] addObject:[[SevenObject alloc] initFieldWithTitle:nil value:nil placeholder:@"Zip Code" key:@"zip"]];
     [[[sevenForm arrayOfObjectsToUse] lastObject] setKeyboardType:UIKeyboardTypeNumberPad];
     
-    [[sevenForm arrayOfObjectsToUse] addObject:[[SevenObjectClass alloc] initHeaderWithTitle:@"Emergency Contact"]];
-    [[sevenForm arrayOfObjectsToUse] addObject:[[SevenObjectClass alloc] initFieldWithTitle:nil value:nil placeholder:@"Name" key:@"emergencyName"]];
+    [[sevenForm arrayOfObjectsToUse] addObject:[[SevenObject alloc] initHeaderWithTitle:@"Emergency Contact"]];
+    [[sevenForm arrayOfObjectsToUse] addObject:[[SevenObject alloc] initFieldWithTitle:nil value:nil placeholder:@"Name" key:@"emergencyName"]];
     [[[sevenForm arrayOfObjectsToUse] lastObject] setAutocapitalizationType:UITextAutocapitalizationTypeWords];
     [[[sevenForm arrayOfObjectsToUse] lastObject] setAutocorrectionType:UITextAutocorrectionTypeNo];
-    [[sevenForm arrayOfObjectsToUse] addObject:[[SevenObjectClass alloc] initFieldWithTitle:nil value:nil placeholder:@"Relation" key:@"emergencyRelationship"]];
-    [[sevenForm arrayOfObjectsToUse] addObject:[[SevenObjectClass alloc] initFieldWithTitle:nil value:nil placeholder:@"Phone Number" key:@"emergencyNumber"]];
+    [[sevenForm arrayOfObjectsToUse] addObject:[[SevenObject alloc] initFieldWithTitle:nil value:nil placeholder:@"Relation" key:@"emergencyRelationship"]];
+    [[sevenForm arrayOfObjectsToUse] addObject:[[SevenObject alloc] initFieldWithTitle:nil value:nil placeholder:@"Phone Number" key:@"emergencyNumber"]];
     [[[sevenForm arrayOfObjectsToUse] lastObject] setKeyboardType:UIKeyboardTypePhonePad];
     
-    [[sevenForm arrayOfObjectsToUse] addObject:[[SevenObjectClass alloc] initHeaderWithTitle:@"School"]];
-    [[sevenForm arrayOfObjectsToUse] addObject:[[SevenObjectClass alloc] initFieldWithTitle:nil value:nil placeholder:@"School Attended" key:@"school"]];
+    [[sevenForm arrayOfObjectsToUse] addObject:[[SevenObject alloc] initHeaderWithTitle:@"School"]];
+    [[sevenForm arrayOfObjectsToUse] addObject:[[SevenObject alloc] initFieldWithTitle:nil value:nil placeholder:@"School Attended" key:@"school"]];
     [[[sevenForm arrayOfObjectsToUse] lastObject] setAutocapitalizationType:UITextAutocapitalizationTypeWords];
-    [[sevenForm arrayOfObjectsToUse] addObject:[[SevenObjectClass alloc] initPickerFieldWithTitle:nil value:nil placeholder:@"Grade" items:@[@[@"",@"Pre-K",@"K",@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"10",@"11",@"12"]] key:@"grade"]];
+    [[sevenForm arrayOfObjectsToUse] addObject:[[SevenObject alloc] initPickerFieldWithTitle:nil value:nil placeholder:@"Grade" items:@[@[@"",@"Pre-K",@"K",@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"10",@"11",@"12"]] key:@"grade"]];
     
-    [[sevenForm arrayOfObjectsToUse] addObject:[[SevenObjectClass alloc] initHeaderWithTitle:@"Special Considerations"]];
-    [[sevenForm arrayOfObjectsToUse] addObject:[[SevenObjectClass alloc] initFieldWithTitle:nil value:nil placeholder:@"optional" key:@"specialConsiderations"]]; // TODO make this multiline
+    [[sevenForm arrayOfObjectsToUse] addObject:[[SevenObject alloc] initHeaderWithTitle:@"Special Considerations"]];
+    [[sevenForm arrayOfObjectsToUse] addObject:[[SevenObject alloc] initFieldWithTitle:nil value:nil placeholder:@"optional" key:@"specialConsiderations"]]; // TODO make this multiline
     [[[sevenForm arrayOfObjectsToUse] lastObject] setAutocapitalizationType:UITextAutocapitalizationTypeSentences];
     
     [sevenForm createForm];

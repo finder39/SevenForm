@@ -33,7 +33,7 @@ float fieldFontSize = 18.0;
 
 #pragma mark - create form
 
-- (SevenObjectClass*)getSevenObjectWithKey:(NSString*)key {
+- (SevenObject*)getSevenObjectWithKey:(NSString*)key {
     for (SevenTextField *theField in arrayOfPlacedFields) {
         if ([[[theField sevenObject] key] isEqualToString:key]) {
             return [theField sevenObject];
@@ -46,7 +46,7 @@ float fieldFontSize = 18.0;
     // for storing origin throughout the creation process
     int originY = 0, tagField = 1;
     
-    for (SevenObjectClass *theSevenObject in arrayOfObjectsToUse) {
+    for (SevenObject *theSevenObject in arrayOfObjectsToUse) {
         if ([theSevenObject isHeader]) {
             // addition space for new header
             if (originY == 0)

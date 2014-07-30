@@ -1,5 +1,5 @@
 //
-//  SevenObjectClass.h
+//  SevenObject.h
 //  Strive
 //
 //  Created by Joseph Neuman on 9/4/13.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface SevenObjectClass : NSObject
+@interface SevenObject : NSObject
 
 @property (nonatomic, assign) UIKeyboardType keyboardType;
 @property (nonatomic, assign) UITextAutocapitalizationType autocapitalizationType;
@@ -40,12 +40,12 @@
 - (BOOL)valueHasChanged;
 - (void)setNewValueAsOriginal;
 
-- (SevenObjectClass *)initHeaderWithTitle:(NSString*)title;
+- (SevenObject *)initHeaderWithTitle:(NSString*)title;
 
-- (SevenObjectClass *)initFieldWithTitle:(NSString*)title value:(NSString *)value placeholder:(NSString*)placeholder key:(NSString*)key;
+- (SevenObject *)initFieldWithTitle:(NSString*)title value:(NSString *)value placeholder:(NSString*)placeholder key:(NSString*)key;
 
-- (SevenObjectClass *)initDateFieldWithTitle:(NSString*)title dateValue:(NSDate*)dateValue placeholder:(NSString*)placeholder key:(NSString*)key;
+- (SevenObject *)initDateFieldWithTitle:(NSString*)title dateValue:(NSDate*)dateValue placeholder:(NSString*)placeholder key:(NSString*)key;
 
-- (SevenObjectClass *)initPickerFieldWithTitle:(NSString*)title value:(NSString*)value placeholder:(NSString*)placeholder items:(NSArray*)items key:(NSString*)key;
+- (SevenObject *)initPickerFieldWithTitle:(NSString*)title value:(NSString*)value placeholder:(NSString*)placeholder items:(NSArray*)items key:(NSString*)key;
 
 @end

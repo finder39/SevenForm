@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "SevenObjectClass.h"
+#import "SevenObject.h"
 
 @interface SevenTextField : UITextField
 
-@property (nonatomic, retain) SevenObjectClass *sevenObject;
+@property (nonatomic, retain) SevenObject *sevenObject;
 
 @end

@@ -1,14 +1,14 @@
 //
-//  SevenObjectClass.m
+//  SevenObject.m
 //  Strive
 //
 //  Created by Joseph Neuman on 9/4/13.
 //  Copyright (c) 2013 Joseph Neuman. All rights reserved.
 //
 
-#import "SevenObjectClass.h"
+#import "SevenObject.h"
 
-@implementation SevenObjectClass
+@implementation SevenObject
 
 - (BOOL)valueHasChanged {
     if (_isDatePicker) {
@@ -45,7 +45,7 @@
     return self;
 }
 
-- (SevenObjectClass *)initHeaderWithTitle:(NSString *)title {
+- (SevenObject *)initHeaderWithTitle:(NSString *)title {
     self = [self init];
     if (self) {
         _isHeader = TRUE;
@@ -54,7 +54,7 @@
     return self;
 }
 
-- (SevenObjectClass *)initFieldWithTitle:(NSString*)title value:(NSString*)value placeholder:(NSString*)placeholder key:(NSString*)key {
+- (SevenObject *)initFieldWithTitle:(NSString*)title value:(NSString*)value placeholder:(NSString*)placeholder key:(NSString*)key {
     self = [self init];
     if (self) {
         _title = title;
@@ -66,7 +66,7 @@
     return self;
 }
 
-- (SevenObjectClass *)initDateFieldWithTitle:(NSString*)title dateValue:(NSDate*)dateValue placeholder:(NSString*)placeholder key:(NSString*)key {
+- (SevenObject *)initDateFieldWithTitle:(NSString*)title dateValue:(NSDate*)dateValue placeholder:(NSString*)placeholder key:(NSString*)key {
     self = [self init];
     if (self) {
         _isDatePicker = TRUE;
@@ -80,7 +80,7 @@
 }
 
 
-- (SevenObjectClass *)initPickerFieldWithTitle:(NSString *)title value:(NSString*)value placeholder:(NSString *)placeholder items:(NSArray *)items key:(NSString*)key {
+- (SevenObject *)initPickerFieldWithTitle:(NSString *)title value:(NSString*)value placeholder:(NSString *)placeholder items:(NSArray *)items key:(NSString*)key {
     self = [self init];
     if (self) {
         _isPicker = TRUE;

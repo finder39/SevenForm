@@ -27,8 +27,8 @@
 		D8DEDC9F1987521800279B04 /* UIView+FindFirstResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = D8DEDC931987521800279B04 /* UIView+FindFirstResponder.m */; };
 		D8DEDCA01987521800279B04 /* SevenFormView.m in Sources */ = {isa = PBXBuildFile; fileRef = D8DEDC951987521800279B04 /* SevenFormView.m */; };
 		D8DEDCA11987521800279B04 /* SevenFormView.m in Sources */ = {isa = PBXBuildFile; fileRef = D8DEDC951987521800279B04 /* SevenFormView.m */; };
-		D8DEDCA21987521800279B04 /* SevenObjectClass.m in Sources */ = {isa = PBXBuildFile; fileRef = D8DEDC971987521800279B04 /* SevenObjectClass.m */; };
-		D8DEDCA31987521800279B04 /* SevenObjectClass.m in Sources */ = {isa = PBXBuildFile; fileRef = D8DEDC971987521800279B04 /* SevenObjectClass.m */; };
+		D8DEDCA21987521800279B04 /* SevenObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D8DEDC971987521800279B04 /* SevenObject.m */; };
+		D8DEDCA31987521800279B04 /* SevenObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D8DEDC971987521800279B04 /* SevenObject.m */; };
 		D8DEDCA41987521800279B04 /* SevenTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = D8DEDC991987521800279B04 /* SevenTextField.m */; };
 		D8DEDCA51987521800279B04 /* SevenTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = D8DEDC991987521800279B04 /* SevenTextField.m */; };
 /* End PBXBuildFile section */
@@ -69,8 +69,8 @@
 		D8DEDC931987521800279B04 /* UIView+FindFirstResponder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FindFirstResponder.m"; sourceTree = "<group>"; };
 		D8DEDC941987521800279B04 /* SevenFormView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SevenFormView.h; sourceTree = "<group>"; };
 		D8DEDC951987521800279B04 /* SevenFormView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SevenFormView.m; sourceTree = "<group>"; };
-		D8DEDC961987521800279B04 /* SevenObjectClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SevenObjectClass.h; sourceTree = "<group>"; };
-		D8DEDC971987521800279B04 /* SevenObjectClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SevenObjectClass.m; sourceTree = "<group>"; };
+		D8DEDC961987521800279B04 /* SevenObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SevenObject.h; sourceTree = "<group>"; };
+		D8DEDC971987521800279B04 /* SevenObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SevenObject.m; sourceTree = "<group>"; };
 		D8DEDC981987521800279B04 /* SevenTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SevenTextField.h; sourceTree = "<group>"; };
 		D8DEDC991987521800279B04 /* SevenTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SevenTextField.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -104,8 +104,8 @@
 			children = (
 				D8DEDC941987521800279B04 /* SevenFormView.h */,
 				D8DEDC951987521800279B04 /* SevenFormView.m */,
-				D8DEDC961987521800279B04 /* SevenObjectClass.h */,
-				D8DEDC971987521800279B04 /* SevenObjectClass.m */,
+				D8DEDC961987521800279B04 /* SevenObject.h */,
+				D8DEDC971987521800279B04 /* SevenObject.m */,
 				D8DEDC981987521800279B04 /* SevenTextField.h */,
 				D8DEDC991987521800279B04 /* SevenTextField.m */,
 			);
@@ -306,7 +306,7 @@
 				D8DEDCA01987521800279B04 /* SevenFormView.m in Sources */,
 				D8DEDC9E1987521800279B04 /* UIView+FindFirstResponder.m in Sources */,
 				D8DEDCA41987521800279B04 /* SevenTextField.m in Sources */,
-				D8DEDCA21987521800279B04 /* SevenObjectClass.m in Sources */,
+				D8DEDCA21987521800279B04 /* SevenObject.m in Sources */,
 				D8DEDC6F1987508500279B04 /* ViewController.m in Sources */,
 				D8DEDC9C1987521800279B04 /* UIView+AlterFrame.m in Sources */,
 				D8DEDC691987508500279B04 /* AppDelegate.m in Sources */,
@@ -321,7 +321,7 @@
 				D8DEDC9F1987521800279B04 /* UIView+FindFirstResponder.m in Sources */,
 				D8DEDCA11987521800279B04 /* SevenFormView.m in Sources */,
 				D8DEDCA51987521800279B04 /* SevenTextField.m in Sources */,
-				D8DEDCA31987521800279B04 /* SevenObjectClass.m in Sources */,
+				D8DEDCA31987521800279B04 /* SevenObject.m in Sources */,
 				D8DEDC841987508500279B04 /* SevenForm_DemoTests.m in Sources */,
 				D8DEDC9D1987521800279B04 /* UIView+AlterFrame.m in Sources */,
 			);

@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "SevenTextField.h"
-#import "SevenObjectClass.h"
+#import "SevenObject.h"
 
 @interface SevenFormView : UIScrollView <UITextFieldDelegate, UIPickerViewDataSource, UIPickerViewDelegate> {
   BOOL _keyboardVisible;
@@ -18,7 +18,7 @@
 @property (nonatomic, strong) NSMutableArray *arrayOfObjectsToUse;
 @property (nonatomic, strong) NSMutableArray *arrayOfPlacedFields;
 
-- (SevenObjectClass*)getSevenObjectWithKey:(NSString*)key;
+- (SevenObject*)getSevenObjectWithKey:(NSString*)key;
 - (void)createForm;
 
 #pragma mark - helper methods
