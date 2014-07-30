@@ -11,7 +11,8 @@
 #import "SevenObjectClass.h"
 
 @interface SevenFormView : UIScrollView <UITextFieldDelegate, UIPickerViewDataSource, UIPickerViewDelegate> {
-  
+  BOOL _keyboardVisible;
+  BOOL popAfterSave;
 }
 
 @property (nonatomic, strong) NSMutableArray *arrayOfObjectsToUse;

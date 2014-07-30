@@ -425,6 +425,35 @@ float fieldFontSize = 18.0;
   return view;
 }
 
+- (void) resizeForKeyboard:(NSNotification*)aNotification {
+  
+  BOOL up = aNotification.name == UIKeyboardWillShowNotification;
+  
+  if (_keyboardVisible == up)
+    return;
+  
+  _keyboardVisible = up;
+  NSDictionary* userInfo = [aNotification userInfo];
+  NSTimeInterval animationDuration;
+  UIViewAnimationOptions animationCurve;
+  CGRect keyboardEndFrame;
+  [[userInfo objectForKey:UIKeyboardAnimationCurveUserInfoKey] getValue:&animationCurve];
+  [[userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey] getValue:&animationDuration];
+  [[userInfo objectForKey:UIKeyboardFrameEndUserInfoKey] getValue:&keyboardEndFrame];
+  
+  [UIView animateWithDuration:animationDuration delay:0 options:animationCurve
+                   animations:^{
+                     CGRect keyboardFrame = [self convertRect:keyboardEndFrame toView:nil];
+                     const UIEdgeInsets oldInset = self.contentInset;
+                     self.contentInset = UIEdgeInsetsMake(oldInset.top, oldInset.left,  up ? keyboardFrame.size.height : 0, oldInset.right);
+                     self.scrollIndicatorInsets = self.contentInset;
+                     if (up) {
+                       [[(UITextField*)[self findFirstResponder] delegate] textFieldDidBeginEditing:(UITextField*)[self findFirstResponder]];
+                     }
+                   }
+                   completion:NULL];
+}
+
 - (void)setContentSizeOfSevenFormView {
   BOOL restoreHorizontal = NO;
   BOOL restoreVertical = NO;
@@ -490,6 +519,8 @@ float fieldFontSize = 18.0;
 #pragma mark - lifecycle
 
 - (void)initialize {
+  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(resizeForKeyboard:) name:UIKeyboardWillShowNotification object:nil];
+  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(resizeForKeyboard:) name:UIKeyboardWillHideNotification object:nil];
   arrayOfObjectsToUse = [NSMutableArray new];
   arrayOfPlacedFields = [NSMutableArray new];
   textColor = [UIColor colorWithRed:69.0/255.0 green:71.0/255.0 blue:77.0/255.0 alpha:1];

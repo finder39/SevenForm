@@ -10,8 +10,7 @@
 #import "SevenFormView.h"
 
 @interface ViewController : UIViewController {
-  BOOL _keyboardVisible;
-  BOOL popAfterSave;
+  
 }
 
 @property (nonatomic, weak) IBOutlet SevenFormView *sevenForm;

@@ -21,8 +21,6 @@
 {
     [super viewDidLoad];
   // Do any additional setup after loading the view, typically from a nib.
-  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(resizeForKeyboard:) name:UIKeyboardWillShowNotification object:nil];
-  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(resizeForKeyboard:) name:UIKeyboardWillHideNotification object:nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -90,35 +88,6 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-- (void) resizeForKeyboard:(NSNotification*)aNotification {
-  
-  BOOL up = aNotification.name == UIKeyboardWillShowNotification;
-  
-  if (_keyboardVisible == up)
-    return;
-  
-  _keyboardVisible = up;
-  NSDictionary* userInfo = [aNotification userInfo];
-  NSTimeInterval animationDuration;
-  UIViewAnimationOptions animationCurve;
-  CGRect keyboardEndFrame;
-  [[userInfo objectForKey:UIKeyboardAnimationCurveUserInfoKey] getValue:&animationCurve];
-  [[userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey] getValue:&animationDuration];
-  [[userInfo objectForKey:UIKeyboardFrameEndUserInfoKey] getValue:&keyboardEndFrame];
-  
-  [UIView animateWithDuration:animationDuration delay:0 options:animationCurve
-                   animations:^{
-                     CGRect keyboardFrame = [self.view convertRect:keyboardEndFrame toView:nil];
-                     const UIEdgeInsets oldInset = self.sevenForm.contentInset;
-                     self.sevenForm.contentInset = UIEdgeInsetsMake(oldInset.top, oldInset.left,  up ? keyboardFrame.size.height : 0, oldInset.right);
-                     self.sevenForm.scrollIndicatorInsets = self.sevenForm.contentInset;
-                     if (up) {
-                       [[(UITextField*)[self.view findFirstResponder] delegate] textFieldDidBeginEditing:(UITextField*)[self.view findFirstResponder]];
-                     }
-                   }
-                   completion:NULL];
 }
 
 #pragma mark - actions
