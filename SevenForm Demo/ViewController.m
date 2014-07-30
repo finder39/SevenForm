@@ -75,7 +75,6 @@
     [[[sevenForm arrayOfObjectsToUse] lastObject] setAutocapitalizationType:UITextAutocapitalizationTypeSentences];
     
     [sevenForm createForm];
-    NSLog(@"%i", sevenForm.arrayOfObjectsToUse.count);
     
     //NSLog(@"%f, %f, %f, %f", sevenForm.view.frame.origin.x, sevenForm.view.frame.origin.y, sevenForm.view.frame.size.width, sevenForm.view.frame.size.height);
     //NSLog(@"%f, %f, %f, %f", sevenForm.view.bounds.origin.x, sevenForm.view.bounds.origin.y, sevenForm.view.bounds.size.width, sevenForm.view.bounds.size.height);
