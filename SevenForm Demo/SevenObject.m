@@ -18,7 +18,7 @@
             return TRUE;
         }
     } else {
-        if ([_value isEqualToString:_originalValue] || (_value == nil && _originalValue == nil)) {
+        if ([_value isEqualToString:_originalValue] || (_value == nil && _originalValue == nil) || ([_value isEqualToString:@""] && _originalValue == nil)) {
             return FALSE;
         } else {
             return TRUE;
