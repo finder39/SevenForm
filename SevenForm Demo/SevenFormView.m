@@ -445,9 +445,10 @@ float fieldFontSize = 18.0;
   
   [UIView animateWithDuration:animationDuration delay:0 options:animationCurve
                    animations:^{
-                     CGRect keyboardFrame = [self convertRect:keyboardEndFrame toView:nil];
+                     CGRect keyboardFrame = [self convertRect:keyboardEndFrame toView:self];
+                     CGRect sevenFormFrame = [self.superview convertRect:self.frame toView:nil];
                      const UIEdgeInsets oldInset = self.contentInset;
-                     self.contentInset = UIEdgeInsetsMake(oldInset.top, oldInset.left,  up ? keyboardFrame.size.height : 0, oldInset.right);
+                     self.contentInset = UIEdgeInsetsMake(oldInset.top, oldInset.left,  up ? MAX(0, sevenFormFrame.origin.y+sevenFormFrame.size.height-keyboardFrame.origin.y) : 0, oldInset.right);
                      self.scrollIndicatorInsets = self.contentInset;
                      if (up) {
                        [[(UITextField*)[self findFirstResponder] delegate] textFieldDidBeginEditing:(UITextField*)[self findFirstResponder]];
