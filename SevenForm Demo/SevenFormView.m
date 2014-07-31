@@ -266,6 +266,36 @@ float fieldFontSize = 18.0;
     }
 }
 
+- (void)resizeForKeyboard:(NSNotification*)aNotification {
+  
+  BOOL up = aNotification.name == UIKeyboardWillShowNotification;
+  
+  if (_keyboardVisible == up)
+    return;
+  
+  _keyboardVisible = up;
+  NSDictionary* userInfo = [aNotification userInfo];
+  NSTimeInterval animationDuration;
+  UIViewAnimationOptions animationCurve;
+  CGRect keyboardEndFrame;
+  [[userInfo objectForKey:UIKeyboardAnimationCurveUserInfoKey] getValue:&animationCurve];
+  [[userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey] getValue:&animationDuration];
+  [[userInfo objectForKey:UIKeyboardFrameEndUserInfoKey] getValue:&keyboardEndFrame];
+  
+  [UIView animateWithDuration:animationDuration delay:0 options:animationCurve
+                   animations:^{
+                     CGRect keyboardFrame = [self convertRect:keyboardEndFrame toView:self];
+                     CGRect sevenFormFrame = [self.superview convertRect:self.frame toView:nil];
+                     const UIEdgeInsets oldInset = self.contentInset;
+                     self.contentInset = UIEdgeInsetsMake(oldInset.top, oldInset.left,  up ? MAX(0, sevenFormFrame.origin.y+sevenFormFrame.size.height-keyboardFrame.origin.y) : 0, oldInset.right);
+                     self.scrollIndicatorInsets = self.contentInset;
+                     if (up) {
+                       [[(UITextField*)[self findFirstResponder] delegate] textFieldDidBeginEditing:(UITextField*)[self findFirstResponder]];
+                     }
+                   }
+                   completion:NULL];
+}
+
 #pragma mark - UIDatePicker stuff
 
 -(void)datePickerValueChanged:(id)sender
@@ -437,36 +467,6 @@ float fieldFontSize = 18.0;
   [view setBackgroundColor:dividerColor];
   [view setAutoresizingMask:(UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleWidth)];
   return view;
-}
-
-- (void) resizeForKeyboard:(NSNotification*)aNotification {
-  
-  BOOL up = aNotification.name == UIKeyboardWillShowNotification;
-  
-  if (_keyboardVisible == up)
-    return;
-  
-  _keyboardVisible = up;
-  NSDictionary* userInfo = [aNotification userInfo];
-  NSTimeInterval animationDuration;
-  UIViewAnimationOptions animationCurve;
-  CGRect keyboardEndFrame;
-  [[userInfo objectForKey:UIKeyboardAnimationCurveUserInfoKey] getValue:&animationCurve];
-  [[userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey] getValue:&animationDuration];
-  [[userInfo objectForKey:UIKeyboardFrameEndUserInfoKey] getValue:&keyboardEndFrame];
-  
-  [UIView animateWithDuration:animationDuration delay:0 options:animationCurve
-                   animations:^{
-                     CGRect keyboardFrame = [self convertRect:keyboardEndFrame toView:self];
-                     CGRect sevenFormFrame = [self.superview convertRect:self.frame toView:nil];
-                     const UIEdgeInsets oldInset = self.contentInset;
-                     self.contentInset = UIEdgeInsetsMake(oldInset.top, oldInset.left,  up ? MAX(0, sevenFormFrame.origin.y+sevenFormFrame.size.height-keyboardFrame.origin.y) : 0, oldInset.right);
-                     self.scrollIndicatorInsets = self.contentInset;
-                     if (up) {
-                       [[(UITextField*)[self findFirstResponder] delegate] textFieldDidBeginEditing:(UITextField*)[self findFirstResponder]];
-                     }
-                   }
-                   completion:NULL];
 }
 
 - (void)setContentSizeOfSevenFormView {
