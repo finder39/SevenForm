@@ -3,9 +3,22 @@ SevenForm
 
 ### A dynamic form system for iOS
 
+#### Features
+* Interface Builder and progmatic placement
+* Creation from array
+* Automatic keyboard management!!!
+	* Automatic scrollview content inset adjustment
+	* Automatic movement of current text field into view
+* Simple function to determine if any field has a changed value (great for using with the back button)
+* Different field entry types
+	* Any keyboard
+	* UIPickerView
+	* UIDatePickerView
+* Easy navigation for user with previous/next/done buttons
+
 #### Goals
-* Easy navigation for the user
-* Appropriately handles all iPhone screen sized, and eventually iPad
+* Support iPad
+* Support rotation
 * Conversion to Swift at some point
 * Hopefully bring all helper files internal to main files
 
