@@ -192,6 +192,18 @@ float fieldFontSize = 18.0;
     [self setScrollEnabled:true];
 }
 
+#pragma mark - informative stuff
+
+- (BOOL)thingsHaveChanged {
+  BOOL thingsHaveChanged = FALSE;
+  for (SevenTextField *field in [self arrayOfPlacedFields]) {
+    if ([[field sevenObject] valueHasChanged]) {
+      thingsHaveChanged = TRUE;
+    }
+  }
+  return thingsHaveChanged;
+}
+
 #pragma mark - keyboard stuff
 
 - (IBAction)actionKeyboardButton:(UIBarButtonItem*)sender {

@@ -114,14 +114,7 @@
 }
 - (IBAction)actionLeftSideButtonPress:(id)sender {
   [[self.view findFirstResponder] resignFirstResponder];
-  BOOL thingsHaveChanged = FALSE;
-  for (SevenTextField *field in [sevenForm arrayOfPlacedFields]) {
-    if ([[field sevenObject] valueHasChanged]) {
-      //DLog(@"item that changed %@, %@, %@", [field sevenObject].key, [field sevenObject].value, [field sevenObject].originalValue);
-      thingsHaveChanged = TRUE;
-    }
-  }
-  if (thingsHaveChanged) {
+  if ([sevenForm thingsHaveChanged]) {
     NSLog(@"Things have changed");
   } else {
     NSLog(@"Things have not changed");

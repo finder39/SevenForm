@@ -20,6 +20,7 @@
 
 - (SevenObject*)getSevenObjectWithKey:(NSString*)key;
 - (void)createForm;
+- (BOOL)thingsHaveChanged;
 
 #pragma mark - helper methods
 - (void)setContentSizeOfSevenFormView;
